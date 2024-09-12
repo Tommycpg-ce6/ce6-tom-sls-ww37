@@ -35,7 +35,7 @@ serverless --help
 
 
 Add serverless using nodejs
-Install jest 
+sudo apt Install jest 
 $ npm install -g jest // to install globally
 $ npm install --save-dev jest
 $ jest
