@@ -14,5 +14,120 @@
     "serviceProviderAwsCfStackUpdated": null,
     "serviceProviderAwsCfStackStatus": null,
     "serviceProviderAwsCfStackOutputs": null
+  },
+  "/home/tommy/scratchpad/ce6-tom-sls-ww37": {
+    "versionSfCore": null,
+    "versionFramework": "4.3.2",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "default-aws-credential-resolver": "<REDACTED>"
+    },
+    "composeServiceName": null,
+    "servicePath": "/home/tommy/scratchpad/ce6-tom-sls-ww37",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "ce6-12sept-sls",
+      "frameworkVersion": "3",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs18.x",
+        "stage": "dev"
+      },
+      "functions": {
+        "api": {
+          "handler": "index.handler",
+          "events": [
+            {
+              "httpApi": {
+                "path": "/",
+                "method": "get"
+              }
+            }
+          ]
+        }
+      },
+      "plugins": [
+        "serverless-offline"
+      ]
+    },
+    "serviceRawFile": "service: ce6-12sept-sls\nframeworkVersion: '3'\n\nprovider:\n  name: aws\n  runtime: nodejs18.x\n\nfunctions:\n  api:\n    handler: index.handler\n    events:\n      - httpApi:\n          path: /\n          method: get\n\nplugins:\n  - serverless-offline",
+    "command": [
+      "offline"
+    ],
+    "options": {},
+    "error": {
+      "message": "The Serverless version (4.3.2) does not satisfy the \"frameworkVersion\" (3) in serverless.yml",
+      "stack": "ServerlessError2: The Serverless version (4.3.2) does not satisfy the \"frameworkVersion\" (3) in serverless.yml\n    at Service.loadServiceFileParam (file:///home/tommy/.serverless/releases/4.3.2/package/dist/sf-core.js:914:9333)\n    at Service.load (file:///home/tommy/.serverless/releases/4.3.2/package/dist/sf-core.js:914:6975)\n    at Serverless.init (file:///home/tommy/.serverless/releases/4.3.2/package/dist/sf-core.js:920:9896)\n    at runFramework (file:///home/tommy/.serverless/releases/4.3.2/package/dist/sf-core.js:943:1253)\n    at async route (file:///home/tommy/.serverless/releases/4.3.2/package/dist/sf-core.js:966:29270)\n    at async Object.run2 [as run] (file:///home/tommy/.serverless/releases/4.3.2/package/dist/sf-core.js:966:29668)\n    at async run3 (file:///home/tommy/.serverless/releases/4.3.2/package/dist/sf-core.js:966:30928)",
+      "code": "FRAMEWORK_VERSION_MISMATCH"
+    },
+    "params": {},
+    "machineId": "54c189e0f97cddbd3bff4b2f213ca7e7",
+    "stage": "dev",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "057973dc-cd7e-40c3-8d35-33e1a324148f",
+    "orgName": "ce6tommy",
+    "userId": "bspVCmZf2BZmwrcHTK",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "ce6tommy",
+    "subscription": null,
+    "userEmail": "tommy.chuapg@gmail.com",
+    "serviceProviderAwsRegion": "us-east-1",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "255945442255",
+    "projectType": "traditional",
+    "versionSf": "4.3.2",
+    "serviceUniqueId": "arn:aws:cloudformation:ap-southeast-1:255945442255:stack/sls-2-dev/951fad70-703a-11ef-9c0e-0a4fc3ca160f",
+    "serviceProviderAwsCfStackId": "arn:aws:cloudformation:ap-southeast-1:255945442255:stack/sls-2-dev/951fad70-703a-11ef-9c0e-0a4fc3ca160f",
+    "serviceProviderAwsCfStackCreated": "2024-09-11T12:37:19.216Z",
+    "serviceProviderAwsCfStackUpdated": "2024-09-11T14:36:50.204Z",
+    "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
+    "serviceProviderAwsCfStackOutputs": [
+      {
+        "OutputKey": "DispatcherLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:ap-southeast-1:255945442255:function:sls-2-dev-dispatcher:1",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-sls-2-dev-DispatcherLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "HelloLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:ap-southeast-1:255945442255:function:sls-2-dev-hello:4",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-sls-2-dev-HelloLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "HttpApiId",
+        "OutputValue": "6hwwnm39vj",
+        "Description": "Id of the HTTP API",
+        "ExportName": "sls-sls-2-dev-HttpApiId"
+      },
+      {
+        "OutputKey": "ServerlessDeploymentBucketName",
+        "OutputValue": "serverless-framework-deployments-ap-southeast-1-1ca40138-df29",
+        "ExportName": "sls-sls-2-dev-ServerlessDeploymentBucketName"
+      },
+      {
+        "OutputKey": "UsersLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:ap-southeast-1:255945442255:function:sls-2-dev-users:4",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-sls-2-dev-UsersLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "HttpApiUrl",
+        "OutputValue": "https://6hwwnm39vj.execute-api.ap-southeast-1.amazonaws.com",
+        "Description": "URL of the HTTP API",
+        "ExportName": "sls-sls-2-dev-HttpApiUrl"
+      }
+    ]
   }
 }
