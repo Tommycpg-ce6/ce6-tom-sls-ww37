@@ -32,3 +32,11 @@ plugins:
 For help
 
 serverless --help
+
+
+Add serverless using nodejs
+Install jest 
+$ npm install -g jest // to install globally
+$ npm install --save-dev jest
+$ jest
+
